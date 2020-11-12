@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#wrapper {
+    height: 900px;
+    width: 1500px;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.container-left {
+    height: 100%;
+    width: 550px;
+    float: left;
+    border: 1px solid grey;
+}
+
+.utente-principale {
+    height: 70px;
+    width: 100%;
+    background-color: lightgrey;
+    border-bottom: 1px solid grey;
+}
+
+.contenitore-avatar {
+    height: 100%;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+}
+
+.foto-avatar {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background-color: purple;
+}
+
+.contenitore-icone {
+    height: 100%;
+    width: calc(100% - 100px);
+    float: left;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+
+}
+
+.icone {
+    font-size: 20px;
+    color: grey;
+    padding-right: 20px;
+}
+
+.icone i {
+    padding: 0 5px;
+}
+
+
+
+.utenti {
+    height: 80px;
+    width: 100%;
+    background-color: yellow;
+    border-bottom: 1px solid grey;
+}
+
+.ricerca-utenti {
+    height: 50px;
+    width: 100%;
+    background-color: lightgrey;
+    border-bottom: 1px solid grey;
+}
+
+/* Fine contenitore di sinistra */
+
+---------------------------------------------------
+
+/* Inizio contenitore di destra */
+
+
+.container-right {
+    height: 100%;
+    width: 950px;
+    background-color: green;
+    border-top: 1px solid grey;
+    border-right: 1px solid grey;
+    border-bottom: 1px solid grey;
+    float: left;
+}
+
+.chat {
+    height: 750px;
+    width: 100%;
+    background-color: blue;
+}
+.riquadro-messaggio {
+    height: 80px;
+    width: 100%;
+    background-color: lightgrey;
+
+}
