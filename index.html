@@ -12,9 +12,9 @@
             <div id="wrapper">
                 <div class="container-left">
                     <div class="utente-principale">
-                        <div class="contenitore-avatar">
+                        <div class="contenitore-avatar-principale">
                             <div class="foto-avatar">
-
+                                <img src="https://www.whowtoo.com/wp-content/uploads/2016/11/myAvatar.jpg">
                             </div>
                         </div>
                         <div class="contenitore-icone">
@@ -25,54 +25,86 @@
                             </div>
                         </div>
                     </div>
-                    <div class="utenti">
-
+                    <div class="notifiche-utenti">
+                        <div class="contenitore-notifiche">
+                            <div class="foto-notifiche">
+                                <i class="fas fa-bell-slash"></i>
+                            </div>
+                        </div>
+                        <div class="contenitore-notifiche-testo">
+                            <div class="notifiche-testo">
+                                <p class="notifiche-titolo">Ricevi notifiche di nuovi messaggi</p>
+                                <p class="notifiche-sottotitolo">Attiva notifiche desktop</p>
+                            </div>
+                        </div>
                     </div>
                     <div class="ricerca-utenti">
-
+                        <div class="contenitore-search">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <div class="contenitore-input">
+                            <input type="text" placeholder="Cerca una nuova chat">
+                        </div>
                     </div>
-                    <div class="utenti">
-
-                    </div>
-                    <div class="utenti">
-
-                    </div>
-                    <div class="utenti">
-
-                    </div>
-                    <div class="utenti">
-
-                    </div>
-                    <div class="utenti">
-
-                    </div>
-                    <div class="utenti">
-
-                    </div>
-                    <div class="utenti">
-
-                    </div>
-                    <div class="utenti">
-
+                    <div v-for="(contatto, indice) in contatti" class="utenti">
+                        <div class="contenitore-avatar">
+                            <div class="avatar">
+                                <img :src="contatto.avatar" alt="">
+                            </div>
+                        </div>
+                        <div class="contenitore-nomi">
+                            <div class="testo-avatar">
+                                <p class="nome-avatar">{{contatto.nome}}</p>
+                                <p class="frase-avatar">Non poteva essere altrimenti</p>
+                            </div>
+                        </div>
+                        <div class="contenitore-orario">
+                            <div class="orario">
+                                <p>17.53</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="container-right">
                     <div class="utente-principale">
-
+                        <div class="contenitore-avatar-corrente">
+                            <div class="foto-avatar">
+                                <img src="http://www.avatars.it/pictures/Mondiali.jpg">
+                            </div>
+                        </div>
+                        <div class="contenitore-nomi-corrente">
+                            <div class="testo-avatar">
+                                <p class="nome-avatar">Michele</p>
+                                <p class="frase-avatar">Ultimo accesso oggi alle 15:40</p>
+                            </div>
+                        </div>
+                        <div class="contenitore-icone-corrente">
+                            <div class="icone-corrente">
+                                <i class="fas fa-search"></i>
+                                <i class="fas fa-paperclip"></i>
+                                <i class="fas fa-ellipsis-v"></i>
+                            </div>
+                        </div>
                     </div>
                     <div class="chat">
-
+                        <div class="messaggi amico">Ciao come stai?</div>
+                        <div class="messaggi sottoscritto">Bene grazie e tu?</div>
+                        <div class="messaggi amico">Io ho il raffreddore</div>
                     </div>
                     <div class="riquadro-messaggio">
-
+                        <div class="face-smile">
+                            <i class="far fa-smile"></i>
+                        </div>
+                        <div class="messaggio">
+                            <input type="text" placeholder="Scrivi un messaggio">
+                        </div>
+                        <div class="microfono">
+                            <i class="fas fa-microphone"></i>
+                        </div>
                     </div>
                 </div>
-
             </div>
-
         </div>
-
-
         <script src="main.js" charset="utf-8"></script>
     </body>
 </html>

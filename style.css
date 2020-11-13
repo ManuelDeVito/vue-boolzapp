@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+body {
+    height: 100vh;
+    background: linear-gradient(0deg, rgba(218,219,213,1) 85%, rgba(0,150,136,1) 85%); 
+}
+
 #wrapper {
     height: 900px;
     width: 1500px;
@@ -15,7 +20,8 @@
     height: 100%;
     width: 550px;
     float: left;
-    border: 1px solid grey;
+    border-right: 1px solid grey;
+    background-color: white;
 }
 
 .utente-principale {
@@ -25,20 +31,27 @@
     border-bottom: 1px solid grey;
 }
 
-.contenitore-avatar {
+.contenitore-avatar-principale {
     height: 100%;
     width: 100px;
     display: flex;
-    justify-content: center;
     align-items: center;
     float: left;
 }
 
 .foto-avatar {
-    height: 60px;
-    width: 60px;
+    height: 50px;
+    width: 50px;
     border-radius: 50%;
-    background-color: purple;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.foto-avatar img {
+    max-width: 50px;
+    border-radius: 50%;
 }
 
 .contenitore-icone {
@@ -48,8 +61,6 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-
-
 }
 
 .icone {
@@ -62,21 +73,152 @@
     padding: 0 5px;
 }
 
-
-
 .utenti {
     height: 80px;
     width: 100%;
-    background-color: yellow;
+    background-color: white;
     border-bottom: 1px solid grey;
+}
+
+.utenti:last-child {
+    border-bottom: none;
+}
+
+.notifiche-utenti {
+    height: 80px;
+    width: 100%;
+    background-color: lightblue;
+    border-bottom: 1px solid grey;
+}
+
+.contenitore-notifiche {
+    height: 100%;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+}
+
+.foto-notifiche {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.foto-notifiche i {
+    font-size: 25px;
+    color: lightblue;
+}
+
+.contenitore-notifiche-testo {
+    height: 100%;
+    width: calc(100% - 100px);
+    float: left;
+}
+
+.notifiche-testo {
+    padding-top: 20px;
+}
+
+.notifiche-titolo {
+    font-size: 18px;
+}
+
+.notifiche-sottotitolo {
+    font-size: 15px;
+    color: grey;
+    text-decoration: underline;
 }
 
 .ricerca-utenti {
     height: 50px;
     width: 100%;
-    background-color: lightgrey;
+    background-color: rgba(255, 255, 255, 0.9);
     border-bottom: 1px solid grey;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 5px;
 }
+
+.contenitore-search {
+    height: 45px;
+    width: 80px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenitore-input input {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 300px;
+    padding-left: 10px;
+    border: none;
+    margin-left: 3px;
+}
+
+.contenitore-avatar {
+    height: 100%;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+}
+
+.avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.avatar img {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background-color: lightgrey;
+    max-width: 60px;
+}
+
+.contenitore-nomi {
+    height: 100%;
+    width: 400px;
+    float: left;
+}
+
+.testo-avatar {
+    padding: 15px 0;
+
+}
+
+.nome-avatar {
+    font-size: 25px;
+}
+
+.frase-avatar {
+    font-size: 15px;
+    color: grey;
+}
+
+.contenitore-orario {
+    height: 100%;
+    width: 48px;
+    float: left;
+}
+
+.orario {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
 
 /* Fine contenitore di sinistra */
 
@@ -87,7 +229,7 @@
 
 .container-right {
     height: 100%;
-    width: 950px;
+    width: calc(1500px - 550px);
     background-color: green;
     border-top: 1px solid grey;
     border-right: 1px solid grey;
@@ -95,14 +237,111 @@
     float: left;
 }
 
-.chat {
-    height: 750px;
-    width: 100%;
-    background-color: blue;
+.contenitore-avatar-corrente {
+    height: 100%;
+    width: 80px;
+    display: flex;
+    align-items: center;
+    float: left;
 }
-.riquadro-messaggio {
-    height: 80px;
-    width: 100%;
-    background-color: lightgrey;
 
+.contenitore-nomi-corrente {
+    height: 100%;
+    width: 500px;
+    float: left;
+}
+
+.contenitore-icone-corrente {
+    height: 100%;
+    width: 350px;
+    float: left;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.icone-corrente {
+    font-size: 20px;
+    color: grey;
+}
+
+.icone-corrente i {
+    padding: 0 8px;
+}
+
+.chat {
+    height: 760px;
+    width: calc(1500px - 550px);
+    padding: 80px;
+    background: url(https://us.123rf.com/450wm/nataliakuprova/nataliakuprova1707/nataliakuprova170700006/81433361-ramadan-kareem-seamless-pattern-bianco-e-nero-fondo-islamico-geometrico-decorato-arabo-di-vettore.jpg?ver=6);
+    float: right;
+}
+
+.messaggi {
+    padding: 20px;
+    margin: 5px;
+    border-radius: 10px;
+    max-width: 200px;
+    clear: both;
+}
+
+.amico {
+    background-color: lightgrey;
+    float: left;
+}
+
+.sottoscritto {
+    background-color: lightgreen;
+    float: right;
+}
+
+.riquadro-messaggio {
+    height: 70px;
+    width: 950px;
+    float: right;
+    background-color: lightgrey;
+}
+
+.face-smile {
+    height: 100%;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+}
+
+.face-smile i {
+    font-size: 30px;
+    color: grey;
+}
+
+.messaggio {
+    height: 100%;
+    width: 750px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+}
+
+.messaggio input {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+    padding-right: 550px;
+}
+
+.microfono {
+    height: 100%;
+    width: 99px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+}
+
+.microfono i {
+    font-size: 30px;
+    color: grey;
 }
