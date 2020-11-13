@@ -78,6 +78,7 @@ body {
     width: 100%;
     background-color: white;
     border-bottom: 1px solid grey;
+    cursor: pointer;
 }
 
 .utenti:last-child {
@@ -275,6 +276,7 @@ body {
     padding: 80px;
     background: url(https://us.123rf.com/450wm/nataliakuprova/nataliakuprova1707/nataliakuprova170700006/81433361-ramadan-kareem-seamless-pattern-bianco-e-nero-fondo-islamico-geometrico-decorato-arabo-di-vettore.jpg?ver=6);
     float: right;
+    overflow: scroll;
 }
 
 .messaggi {
@@ -285,12 +287,12 @@ body {
     clear: both;
 }
 
-.amico {
+.inviato {
     background-color: lightgrey;
     float: left;
 }
 
-.sottoscritto {
+.ricevuto {
     background-color: lightgreen;
     float: right;
 }
