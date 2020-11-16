@@ -43,10 +43,10 @@
                             <i class="fas fa-search"></i>
                         </div>
                         <div class="contenitore-input">
-                            <input type="text" placeholder="Cerca una nuova chat">
+                            <input type="text" placeholder="Cerca o inizia una nuova chat">
                         </div>
                     </div>
-                    <div @click="cambio_utente(indice)" v-for="(contatto, indice) in contatti" class="utenti">
+                    <div @click="cambio_utente(indice)" v-for="(contatto, indice) in contatti" class="utenti" :class="indice == indice_contatti ? 'active' : ''">
                         <div class="contenitore-avatar">
                             <div class="avatar">
                                 <img :src="contatto.avatar" alt="">
@@ -96,7 +96,7 @@
                             <i class="far fa-smile"></i>
                         </div>
                         <div class="messaggio">
-                            <input type="text" placeholder="Scrivi un messaggio">
+                            <input @keyup.enter="aggiungi_messaggio" type="text" v-model="nuovo_messaggio_inviato" placeholder="Scrivi un messaggio">
                         </div>
                         <div class="microfono">
                             <i class="fas fa-microphone"></i>

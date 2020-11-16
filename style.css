@@ -81,6 +81,10 @@ body {
     cursor: pointer;
 }
 
+.utenti.active {
+    background-color: lightgrey;
+}
+
 .utenti:last-child {
     border-bottom: none;
 }
@@ -139,7 +143,7 @@ body {
 .ricerca-utenti {
     height: 50px;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(240, 240, 240, 0.9);
     border-bottom: 1px solid grey;
     display: flex;
     justify-content: flex-start;
@@ -148,21 +152,33 @@ body {
 }
 
 .contenitore-search {
-    height: 45px;
-    width: 80px;
+    height: 40px;
+    width: 20%;
     background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+.contenitore-search i {
+    width: 95%;
+    padding: 10px 45px;
+}
+
+.contenitore-input {
+    height: 40px;
+    width: 80%;
+    margin-left: 5px;
+
+}
+
 .contenitore-input input {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-right: 300px;
-    padding-left: 10px;
+    height: 40px;
+    width: 95%;
     border: none;
-    margin-left: 3px;
+    border-radius: 10px;
+    padding-left: 10px;
+
 }
 
 .contenitore-avatar {
@@ -288,13 +304,13 @@ body {
 }
 
 .inviato {
-    background-color: lightgrey;
-    float: left;
+    background-color: lightgreen;
+    float: right;
 }
 
 .ricevuto {
-    background-color: lightgreen;
-    float: right;
+    background-color: lightgrey;
+    float: left;
 }
 
 .riquadro-messaggio {
@@ -306,7 +322,7 @@ body {
 
 .face-smile {
     height: 100%;
-    width: 100px;
+    width: 10%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -320,7 +336,7 @@ body {
 
 .messaggio {
     height: 100%;
-    width: 750px;
+    width: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -328,15 +344,16 @@ body {
 }
 
 .messaggio input {
-    padding-top: 15px;
-    padding-bottom: 15px;
+    width: 90%;
+    height: 80%;
     padding-left: 20px;
-    padding-right: 550px;
+    border-radius: 10px;
+    border: none;
 }
 
 .microfono {
     height: 100%;
-    width: 99px;
+    width: 10%;
     display: flex;
     justify-content: center;
     align-items: center;

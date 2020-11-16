@@ -5,7 +5,11 @@ var app = new Vue ({
 
     data: {
 
+
+    nuovo_messaggio_inviato: "",
+
     indice_contatti: 0,
+
     contatti: [
             {
                 nome: 'Michele',
@@ -191,7 +195,37 @@ var app = new Vue ({
         cambio_utente(contatto_corrente) {
 
             this.indice_contatti = contatto_corrente;
+        },
+
+        aggiungi_messaggio(nuovo_messaggio) {
+
+            var nuovo_messaggio = {
+                data: '12/11/2020 21:04:21',
+                messaggio: '',
+                stato: 'inviato'
+            }
+
+            nuovo_messaggio.messaggio = this.nuovo_messaggio_inviato;
+
+            this.contatti[this.indice_contatti].messaggi.push(nuovo_messaggio);
+
+            this.nuovo_messaggio_inviato = '';
+
+        setTimeout(() => {
+
+            var risposta_automatica = {
+                data: '12/11/2020 21:05:48',
+                messaggio: 'Ok!!!',
+                stato: 'ricevuto'
+            }
+
+            this.contatti[this.indice_contatti].messaggi.push(risposta_automatica);
+            }, 1000);
+
+
         }
+
+
 
 
     }
