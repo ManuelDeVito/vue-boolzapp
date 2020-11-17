@@ -5,6 +5,7 @@ var app = new Vue ({
 
     data: {
 
+    ricerca_utenti: "",
 
     nuovo_messaggio_inviato: "",
 
@@ -187,6 +188,28 @@ var app = new Vue ({
                     }
                 ],
             },
+            {
+                nome: 'Manuel',
+                avatar: 'http://www.avatars.it/pictures/uefaCampioni_thumb.jpg',
+                visibile: true,
+                messaggi: [
+                    {
+                        data: '04/12/2020 10:30:41',
+                        messaggio: 'Vieni a giocare a calcetto stasera?',
+                        stato: 'inviato'
+                    },
+                    {
+                        data: '04/12/2020 10:30:53',
+                        messaggio: 'La partita inizia alle 21 ',
+                        stato: 'inviato'
+                    },
+                    {
+                        data: '04/12/2020 10:33:29',
+                        messaggio: 'Va bene ci sarò.A stasera!',
+                        stato: 'ricevuto'
+                    }
+                ],
+            },
         ]
 
     },
@@ -195,21 +218,22 @@ var app = new Vue ({
         cambio_utente(contatto_corrente) {
 
             this.indice_contatti = contatto_corrente;
+            this.scrollautomatico();
         },
 
-        aggiungi_messaggio(nuovo_messaggio) {
+        aggiungi_messaggio() {
 
             var nuovo_messaggio = {
                 data: '12/11/2020 21:04:21',
-                messaggio: '',
+                messaggio: this.nuovo_messaggio_inviato,
                 stato: 'inviato'
             }
-
-            nuovo_messaggio.messaggio = this.nuovo_messaggio_inviato;
 
             this.contatti[this.indice_contatti].messaggi.push(nuovo_messaggio);
 
             this.nuovo_messaggio_inviato = '';
+
+            this.scrollautomatico();
 
         setTimeout(() => {
 
@@ -219,13 +243,39 @@ var app = new Vue ({
                 stato: 'ricevuto'
             }
 
+            this.scrollautomatico();
+
             this.contatti[this.indice_contatti].messaggi.push(risposta_automatica);
             }, 1000);
 
 
+        },
+
+        scrollautomatico() {
+
+            Vue.nextTick(function(){
+                let chat_scroll_messaggi = document.getElementsByClassName('chat')[0];
+                chat_scroll_messaggi.scrollTop = chat_scroll_messaggi.scrollHeight;
+            });
+
+        },
+
+        trova_contatto() {
+
+            this.contatti.forEach((contatto, i) => {
+                if (contatto.nome.includes(this.ricerca_utenti)) {
+                    contatto.visibile = true;
+                }else {
+                    contatto.visibile = false;
+                }
+            });
+
+        },
+
+        mounted: function() {
+            this.scrollautomatico();
+
         }
-
-
 
 
     }
