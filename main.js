@@ -12,6 +12,50 @@ var app = new Vue ({
     indice_contatti: 0,
 
     contatti: [
+        {
+            nome: 'Michele',
+            avatar: 'http://www.avatars.it/pictures/Mondiali.jpg',
+            visibile: true,
+            messaggi: [
+                {
+                    data: '12/11/2020 20:30:35',
+                    messaggio: 'Hai portato a spasso il cane?',
+                    stato: 'inviato'
+                },
+                {
+                    data: '12/11/2020 20:45:50',
+                    messaggio: 'Ricordati di dargli da mangiare',
+                    stato: 'inviato'
+                },
+                {
+                    data: '12/11/2020 20:55:23',
+                    messaggio: 'Tutto fatto!',
+                    stato: 'ricevuto'
+                }
+            ],
+        },
+        {
+            nome: 'Michele',
+            avatar: 'http://www.avatars.it/pictures/Mondiali.jpg',
+            visibile: true,
+            messaggi: [
+                {
+                    data: '12/11/2020 20:30:35',
+                    messaggio: 'Hai portato a spasso il cane?',
+                    stato: 'inviato'
+                },
+                {
+                    data: '12/11/2020 20:45:50',
+                    messaggio: 'Ricordati di dargli da mangiare',
+                    stato: 'inviato'
+                },
+                {
+                    data: '12/11/2020 20:55:23',
+                    messaggio: 'Tutto fatto!',
+                    stato: 'ricevuto'
+                }
+            ],
+        },                
             {
                 nome: 'Michele',
                 avatar: 'http://www.avatars.it/pictures/Mondiali.jpg',
@@ -263,7 +307,7 @@ var app = new Vue ({
         trova_contatto() {
 
             this.contatti.forEach((contatto, i) => {
-                if (contatto.nome.includes(this.ricerca_utenti)) {
+                if (contatto.nome.toLowerCase().includes(this.ricerca_utenti.toLowerCase())) {
                     contatto.visibile = true;
                 }else {
                     contatto.visibile = false;
