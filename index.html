@@ -47,7 +47,7 @@
                         </div>
                     </div>
                     <div class="contenitore-utenti">
-                        <div @click="cambio_utente(indice)" v-for="(contatto, indice) in contatti" class="utenti" :class="indice == indice_contatti ? 'active' : ''" v-if="contatto.visibile = true">
+                        <div @click="cambio_utente(indice)" v-for="(contatto, indice) in contatti" class="utenti" :class="indice == indice_contatti ? 'active' : ''" v-if="contatto.visibile == true">
                             <div class="contenitore-avatar">
                                 <div class="avatar">
                                     <img :src="contatto.avatar" alt="">
