@@ -310,11 +310,18 @@ body {
 }
 
 .messaggi {
-    padding: 20px;
+    padding: 10px;
     margin: 5px;
     border-radius: 10px;
     max-width: 200px;
     clear: both;
+    position: relative;
+    cursor: pointer;
+}
+
+.messaggi i {
+    display: flex;
+    justify-content: flex-end;
 }
 
 .inviato {
@@ -325,6 +332,31 @@ body {
 .ricevuto {
     background-color: lightgrey;
     float: left;
+}
+
+.orario-messaggio {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 5px;
+    font-size: 15px;
+}
+
+.drop-menu.visibile {
+    display: block;
+    position: absolute;
+    background-color: white;
+    top: 23px;
+    right: 0;
+    padding: 10px;
+    color: black;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+.drop-menu.invisibile {
+    display: none;
 }
 
 .riquadro-messaggio {

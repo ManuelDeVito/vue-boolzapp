@@ -61,7 +61,7 @@
                             </div>
                             <div class="contenitore-orario">
                                 <div class="orario">
-                                    <p>17.53</p>
+                                    <p>17:53</p>
                                 </div>
                             </div>
                         </div>
@@ -77,7 +77,9 @@
                         <div class="contenitore-nomi-corrente">
                             <div class="testo-avatar">
                                 <p class="nome-avatar">{{contatti[indice_contatti].nome}}</p>
-                                <p class="frase-avatar">Ultimo accesso oggi alle 15:40</p>
+                                <p class="frase-avatar">
+                                    Ultimo accesso oggi alle 17:53
+                                </p>
                             </div>
                         </div>
                         <div class="contenitore-icone-corrente">
@@ -91,7 +93,15 @@
                     <div class="contenitore-chat">
                         <div class="chat">
                             <div v-for="(elemento, indice) in contatti[indice_contatti].messaggi" class="chat-corrente">
-                            <div :class="contatti[indice_contatti].messaggi[indice].stato" class="messaggi">{{elemento.messaggio}}</div>
+                                <div :class="contatti[indice_contatti].messaggi[indice].stato" class="messaggi">
+                                    <i @click="drop_menu_visibile(indice)" class="fas fa-angle-down"></i>
+                                    {{elemento.messaggio}}
+                                    <p class="orario-messaggio">{{elemento.data}}</p>
+                                    <div class="drop-menu" :class="(contatti[indice_contatti].messaggi[indice].cancella) ? 'visibile' : 'invisibile'">
+                                        <span @click="cancella_messaggio(indice)">Cancella Messaggio</span>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                     </div>

@@ -12,69 +12,30 @@ var app = new Vue ({
     indice_contatti: 0,
 
     contatti: [
-        {
-            nome: 'Michele',
-            avatar: 'http://www.avatars.it/pictures/Mondiali.jpg',
-            visibile: true,
-            messaggi: [
-                {
-                    data: '12/11/2020 20:30:35',
-                    messaggio: 'Hai portato a spasso il cane?',
-                    stato: 'inviato'
-                },
-                {
-                    data: '12/11/2020 20:45:50',
-                    messaggio: 'Ricordati di dargli da mangiare',
-                    stato: 'inviato'
-                },
-                {
-                    data: '12/11/2020 20:55:23',
-                    messaggio: 'Tutto fatto!',
-                    stato: 'ricevuto'
-                }
-            ],
-        },
-        {
-            nome: 'Michele',
-            avatar: 'http://www.avatars.it/pictures/Mondiali.jpg',
-            visibile: true,
-            messaggi: [
-                {
-                    data: '12/11/2020 20:30:35',
-                    messaggio: 'Hai portato a spasso il cane?',
-                    stato: 'inviato'
-                },
-                {
-                    data: '12/11/2020 20:45:50',
-                    messaggio: 'Ricordati di dargli da mangiare',
-                    stato: 'inviato'
-                },
-                {
-                    data: '12/11/2020 20:55:23',
-                    messaggio: 'Tutto fatto!',
-                    stato: 'ricevuto'
-                }
-            ],
-        },                
+
             {
                 nome: 'Michele',
                 avatar: 'http://www.avatars.it/pictures/Mondiali.jpg',
                 visibile: true,
                 messaggi: [
                     {
-                        data: '12/11/2020 20:30:35',
+                        data: '20:30',
                         messaggio: 'Hai portato a spasso il cane?',
-                        stato: 'inviato'
+                        stato: 'inviato',
+                        cancella: false
+
                     },
                     {
-                        data: '12/11/2020 20:45:50',
+                        data: '20:45',
                         messaggio: 'Ricordati di dargli da mangiare',
-                        stato: 'inviato'
+                        stato: 'inviato',
+                        cancella: false
                     },
                     {
-                        data: '12/11/2020 20:55:23',
+                        data: '20:55',
                         messaggio: 'Tutto fatto!',
-                        stato: 'ricevuto'
+                        stato: 'ricevuto',
+                        cancella: false
                     }
                 ],
             },
@@ -84,19 +45,22 @@ var app = new Vue ({
                 visibile: true,
                 messaggi: [
                     {
-                        data: '23/05/2020 19:14:11',
+                        data: '19:14',
                         messaggio: 'Hai mangiato la pasta?',
-                        stato: 'inviato'
+                        stato: 'inviato',
+                        cancella: false
                     },
                     {
-                        data: '23/05/2020 19:15:05',
+                        data: '19:15',
                         messaggio: 'La trovi nella pentola',
-                        stato: 'inviato'
+                        stato: 'inviato',
+                        cancella: false
                     },
                     {
-                        data: '23/05/2020 19:17:25',
+                        data: '19:17',
                         messaggio: 'Grazie!',
-                        stato: 'ricevuto'
+                        stato: 'ricevuto',
+                        cancella: false
                     }
                 ],
             },
@@ -106,19 +70,22 @@ var app = new Vue ({
                 visibile: true,
                 messaggi: [
                     {
-                        data: '15/06/2020 14:20:21',
+                        data: '14:20',
                         messaggio: 'Sei andato in palestra?',
-                        stato: 'inviato'
+                        stato: 'inviato',
+                        cancella: false
                     },
                     {
-                        data: '15/06/2020 14:21:07',
+                        data: '14:21',
                         messaggio: 'Non andare troppo tardi',
-                        stato: 'inviato'
+                        stato: 'inviato',
+                        cancella: false
                     },
                     {
-                        data: '15/06/2020 14:22:45',
+                        data: '14:22',
                         messaggio: 'Va bene andrò presto!',
-                        stato: 'ricevuto'
+                        stato: 'ricevuto',
+                        cancella: false
                     }
                 ],
             },
@@ -128,19 +95,22 @@ var app = new Vue ({
                 visibile: true,
                 messaggi: [
                     {
-                        data: '30/06/2020 08:50:46',
+                        data: '08:50',
                         messaggio: 'Vai a ritirare la macchina dal meccanico',
-                        stato: 'inviato'
+                        stato: 'inviato',
+                        cancella: false
                     },
                     {
-                        data: '30/06/2020 08:52:32',
+                        data: '08:50',
                         messaggio: 'Ricordati di prendere i soldi',
-                        stato: 'inviato'
+                        stato: 'inviato',
+                        cancella: false
                     },
                     {
-                        data: '30/06/2020 08:58:13',
+                        data: '08:58',
                         messaggio: 'Ok tra poco vado!',
-                        stato: 'ricevuto'
+                        stato: 'ricevuto',
+                        cancella: false
                     }
                 ],
             },
@@ -150,19 +120,22 @@ var app = new Vue ({
                 visibile: true,
                 messaggi: [
                     {
-                        data: '03/07/2020 10:14:27',
+                        data: '10:14',
                         messaggio: 'Vai a prendere tua sorella a scuola',
-                        stato: 'inviato'
+                        stato: 'inviato',
+                        cancella: false
                     },
                     {
-                        data: '03/07/2020 10:14:48',
+                        data: '10:14',
                         messaggio: 'Portagli il pranzo',
-                        stato: 'inviato'
+                        stato: 'inviato',
+                        cancella: false
                     },
                     {
-                        data: '03/07/2020 10:19:21',
+                        data: '10:19',
                         messaggio: 'Sarà fatto!',
-                        stato: 'ricevuto'
+                        stato: 'ricevuto',
+                        cancella: false
                     }
                 ],
             },
@@ -172,19 +145,22 @@ var app = new Vue ({
                 visibile: true,
                 messaggi: [
                     {
-                        data: '16/07/2020 12:32:40',
+                        data: '12:32',
                         messaggio: 'Vai a fare shopping oggi?',
-                        stato: 'inviato'
+                        stato: 'inviato',
+                        cancella: false
                     },
                     {
-                        data: '16/07/2020 12:33:02',
+                        data: '12:33',
                         messaggio: 'Se vai posso venire con te?',
-                        stato: 'inviato'
+                        stato: 'inviato',
+                        cancella: false
                     },
                     {
-                        data: '16/07/2020 12:35:18',
+                        data: '12:35',
                         messaggio: 'Oggi non riesco ho altri impegni!',
-                        stato: 'ricevuto'
+                        stato: 'ricevuto',
+                        cancella: false
                     }
                 ],
             },
@@ -194,19 +170,22 @@ var app = new Vue ({
                 visibile: true,
                 messaggi: [
                     {
-                        data: '23/03/2020 17:20:43',
+                        data: '17:20',
                         messaggio: 'Lo stadio era pieno oggi?',
-                        stato: 'inviato'
+                        stato: 'inviato',
+                        cancella: false
                     },
                     {
-                        data: '23/03/2020 17:20:49',
+                        data: '17:20',
                         messaggio: 'Quanto vorrei venire a tifare anche io',
-                        stato: 'inviato'
+                        stato: 'inviato',
+                        cancella: false
                     },
                     {
-                        data: '23/03/2020 17:22:05',
+                        data: '17:22',
                         messaggio: 'Si come sempre! Prima o poi verrai anche tu',
-                        stato: 'ricevuto'
+                        stato: 'ricevuto',
+                        cancella: false
                     }
                 ],
             },
@@ -216,19 +195,22 @@ var app = new Vue ({
                 visibile: true,
                 messaggi: [
                     {
-                        data: '03/10/2020 11:03:41',
+                        data: '11:03',
                         messaggio: 'Tanti auguri di buon compleanno!',
-                        stato: 'inviato'
+                        stato: 'inviato',
+                        cancella: false
                     },
                     {
-                        data: '03/10/2020 11:04:06',
+                        data: '11:04',
                         messaggio: 'Ci vediamo stasera alla festa',
-                        stato: 'inviato'
+                        stato: 'inviato',
+                        cancella: false
                     },
                     {
-                        data: '03/10/2020 11:05:33',
+                        data: '11:05',
                         messaggio: 'Grazie mille a stasera!',
-                        stato: 'ricevuto'
+                        stato: 'ricevuto',
+                        cancella: false
                     }
                 ],
             },
@@ -238,19 +220,22 @@ var app = new Vue ({
                 visibile: true,
                 messaggi: [
                     {
-                        data: '04/12/2020 10:30:41',
+                        data: '10:30',
                         messaggio: 'Vieni a giocare a calcetto stasera?',
-                        stato: 'inviato'
+                        stato: 'inviato',
+                        cancella: false
                     },
                     {
-                        data: '04/12/2020 10:30:53',
+                        data: '10:30',
                         messaggio: 'La partita inizia alle 21 ',
-                        stato: 'inviato'
+                        stato: 'inviato',
+                        cancella: false
                     },
                     {
-                        data: '04/12/2020 10:33:29',
+                        data: '10:33',
                         messaggio: 'Va bene ci sarò.A stasera!',
-                        stato: 'ricevuto'
+                        stato: 'ricevuto',
+                        cancella: false
                     }
                 ],
             },
@@ -268,9 +253,10 @@ var app = new Vue ({
         aggiungi_messaggio() {
 
             var nuovo_messaggio = {
-                data: '12/11/2020 21:04:21',
+                data: this.orario_corrente(),
                 messaggio: this.nuovo_messaggio_inviato,
-                stato: 'inviato'
+                stato: 'inviato',
+                cancella: false
             }
 
             this.contatti[this.indice_contatti].messaggi.push(nuovo_messaggio);
@@ -282,9 +268,10 @@ var app = new Vue ({
         setTimeout(() => {
 
             var risposta_automatica = {
-                data: '12/11/2020 21:05:48',
+                data: this.orario_corrente(),
                 messaggio: 'Ok!!!',
-                stato: 'ricevuto'
+                stato: 'ricevuto',
+                cancella: false
             }
 
             this.scrollautomatico();
@@ -315,6 +302,21 @@ var app = new Vue ({
             });
 
         },
+
+        drop_menu_visibile(indice) {
+
+            if (this.contatti[this.indice_contatti].messaggi[indice].cancella == false) {
+                this.contatti[this.indice_contatti].messaggi[indice].cancella = true;
+            }else {
+                this.contatti[this.indice_contatti].messaggi[indice].cancella = false;
+            }
+        },
+
+        cancella_messaggio(indice) {
+            this.contatti[this.indice_contatti].messaggi.splice(indice, 1);
+        },
+
+
 
         mounted: function() {
             this.scrollautomatico();
